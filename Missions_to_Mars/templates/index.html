@@ -17,6 +17,7 @@
         </div>
    
         <div class = "row"> <!-- Start of latest news row-->
+
          <h2> Latest Mars News</h2>
          <br>
          <h3>{{data.news_title}}</h3>
@@ -25,8 +26,12 @@
 
         </div> <!-- End of latest news row-->
         <div class = "row">  <!-- Start of featured figure and table row-->
+            <div class = "col-md-7">
             <img src="{{ data.featured_image }}" alt="Featured_Image" width="30%">
-
+            </div>
+            <div class = "col-md-5">
+                <h4>{{data.table}}</h4>
+            </div>
         </div>
         <div class = "container">  <!-- Start of hemisphere container-->
             
