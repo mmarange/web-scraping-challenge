@@ -10,16 +10,50 @@
 </head>
 
 <body>
-  <div class="container-fluid">
-    <div class="jumbotron text-center">
-      <h1>Planet Mars</h1>
-      <p>Beach. Rainforest. Volcano. Tree House. Sloths.</p>
-      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Get Data!</a></p>
-    </div>
-    <img src="{{ data.featured_image }}" alt="Featured_Image">
+    <div class="container-fluid">
+        <div class="jumbotron text-center">
+            <h1>Mission to Planet Mars</h1>
+            <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Get New Data!</a></p>
+        </div>
    
-  </div>
-  </div>
+        <div class = "row"> <!-- Start of latest news row-->
+         <h2> Latest Mars News</h2>
+         <br>
+         <h3>{{data.news_title}}</h3>
+         <br>
+         <p>{{data.news_p}}</p>   
+
+        </div> <!-- End of latest news row-->
+        <div class = "row">  <!-- Start of featured figure and table row-->
+            <img src="{{ data.featured_image }}" alt="Featured_Image" width="30%">
+
+        </div>
+        <div class = "container">  <!-- Start of hemisphere container-->
+            
+            <h2>Mars Hemispheres</h2>
+            <hr>
+            <figure>
+            <img src="{{ data.hemispheres[0].img_url}}" alt="Hemisphere_Image1">
+            <figcaption>{{ data.hemispheres[0].title}}</figcaption>
+            </figure>
+            <figure>
+                <img src="{{ data.hemispheres[1].img_url}}" alt="Hemisphere_Image2">
+                <figcaption>{{ data.hemispheres[1].title}}</figcaption>
+            </figure>
+            <figure>
+                <img src="{{ data.hemispheres[2].img_url}}" alt="Hemisphere_Image3">
+                <figcaption>{{ data.hemispheres[2].title}}</figcaption>
+            </figure>
+            <figure>
+                <img src="{{ data.hemispheres[3].img_url}}" alt="Hemisphere_Image4">
+                <figcaption>{{ data.hemispheres[3].title}}</figcaption>
+            </figure>
+
+        </div>
+    
+    </div>
+  
+  
 </body>
 
 </html>
