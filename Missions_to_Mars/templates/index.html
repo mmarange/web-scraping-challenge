@@ -6,7 +6,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Planet Mars News</title>
+  
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+        .news {
+                padding-left: 3%;
+                }
+        figcaption {font-size: 20px; padding-bottom: 5%;
+                }
+        h2 {
+           font-family:Arial, Helvetica, sans-serif; font-weight: bolder;
+        }
+  </style>
 </head>
 
 <body>
@@ -16,26 +28,28 @@
             <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Get New Data!</a></p>
         </div>
    
-        <div class = "row"> <!-- Start of latest news row-->
+        <div class = "row news"> <!-- Start of latest news row-->
 
-         <h2> Latest Mars News</h2>
-         <br>
-         <h3>{{data.news_title}}</h3>
-         <br>
+         <h2 > Latest Mars News</h2>
+         
+         <h3 style="font-weight: bold; font-size: 20px;">{{data.news_title}}</h3>
+         
          <p>{{data.news_p}}</p>   
 
         </div> <!-- End of latest news row-->
-        <div class = "row">  <!-- Start of featured figure and table row-->
+        <div class = "row news">  <!-- Start of featured figure and table row-->
             <div class = "col-md-7">
-            <img src="{{ data.featured_image }}" alt="Featured_Image" width="30%">
+                <h3 style="font-weight: bold; font-size: 20px;">Featured Mars Image</h3>    
+            <img src="{{ data.featured_image }}" alt="Featured_Image" width="100%">
             </div>
             <div class = "col-md-5">
-                <h4>{{data.table}}</h4>
+                <h3 style="font-weight: bold; font-size: 20px;">Mars Facts</h3>   
+            {{data.table|safe}}
             </div>
         </div>
-        <div class = "container">  <!-- Start of hemisphere container-->
+        <div class = "container news">  <!-- Start of hemisphere container-->
             
-            <h2>Mars Hemispheres</h2>
+            <h2 style="text-align: center; font-family:Arial, Helvetica, sans-serif; font-weight: bolder;">Mars Hemispheres</h2>
             <hr>
             <figure>
             <img src="{{ data.hemispheres[0].img_url}}" alt="Hemisphere_Image1">

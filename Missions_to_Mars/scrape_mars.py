@@ -32,7 +32,7 @@ def scrape():
 
     # Retrieve page with the requests module
     browser.visit(url)
-    time.sleep(5) # Sleep for 5 seconds
+    time.sleep(3) # Sleep for 5 seconds
     html = browser.html
    
     # Create BeautifulSoup object; parse with 'html.parser'
@@ -54,12 +54,12 @@ def scrape():
 
     # Retrieve page with the requests module
     browser.visit(url)
-    time.sleep(5) # Sleep for 5 seconds
+    time.sleep(3) # Sleep for 5 seconds
     html = browser.html
     # Create BeautifulSoup object; parse with 'html.parser'
     image_soup = BeautifulSoup(html, 'html.parser')
     browser.links.find_by_partial_text('FULL IMAGE').click()
-    time.sleep(5) # Sleep for 5 seconds
+    time.sleep(3) # Sleep for 3 seconds
     # # Create BeautifulSoup object; parse with 'html.parser' for the full image page
     html = browser.html
     image_soup = BeautifulSoup(html, 'html.parser')
