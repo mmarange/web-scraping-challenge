@@ -13,10 +13,14 @@
         .news {
                 padding-left: 3%;
                 }
-        figcaption {font-size: 20px; padding-bottom: 5%;
+        figcaption {font-size: 20px; 
+                    font-weight: bold;
                 }
         h2 {
            font-family:Arial, Helvetica, sans-serif; font-weight: bolder;
+        }
+        figure {
+            border: 5px solid #555;
         }
   </style>
 </head>
@@ -51,22 +55,35 @@
             
             <h2 style="text-align: center; font-family:Arial, Helvetica, sans-serif; font-weight: bolder;">Mars Hemispheres</h2>
             <hr>
-            <figure>
-            <img src="{{ data.hemispheres[0].img_url}}" alt="Hemisphere_Image1">
-            <figcaption>{{ data.hemispheres[0].title}}</figcaption>
-            </figure>
-            <figure>
-                <img src="{{ data.hemispheres[1].img_url}}" alt="Hemisphere_Image2">
-                <figcaption>{{ data.hemispheres[1].title}}</figcaption>
-            </figure>
-            <figure>
-                <img src="{{ data.hemispheres[2].img_url}}" alt="Hemisphere_Image3">
-                <figcaption>{{ data.hemispheres[2].title}}</figcaption>
-            </figure>
-            <figure>
-                <img src="{{ data.hemispheres[3].img_url}}" alt="Hemisphere_Image4">
-                <figcaption>{{ data.hemispheres[3].title}}</figcaption>
-            </figure>
+            <div class ='row' style="padding-bottom: 5%";>
+                <div class = "col-md-6"> 
+                    <figure>
+                    <img src="{{ data.hemispheres[0].img_url}}" alt="Hemisphere_Image1" width="100%">
+                    <figcaption>{{ data.hemispheres[0].title}}</figcaption>
+                    </figure>
+                </div>
+                <div class = "col-md-6">
+                    <figure>
+                        <img src="{{ data.hemispheres[1].img_url}}" alt="Hemisphere_Image2" width="100%">
+                        <figcaption>{{ data.hemispheres[1].title}}</figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <div class ='row'style="padding-bottom: 5%"> 
+                <div class = "col-md-6"> 
+                    <figure>
+                        <img src="{{ data.hemispheres[2].img_url}}" alt="Hemisphere_Image3" width="100%">
+                        <figcaption>{{ data.hemispheres[2].title}}</figcaption>
+                    </figure>
+                </div>
+                <div class = "col-md-6">
+                        <figure>
+                            <img src="{{ data.hemispheres[3].img_url}}" alt="Hemisphere_Image4" width="100%">
+                            <figcaption>{{ data.hemispheres[3].title}}</figcaption>
+                        </figure>
+                </div>
+            </div>
 
         </div>
     

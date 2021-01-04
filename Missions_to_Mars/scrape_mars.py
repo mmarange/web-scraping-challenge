@@ -71,7 +71,7 @@ def scrape():
     image_link = f'{base_url}{image}'
     image_link
 
-
+   
     # # Mars Facts
 
     # In[10]:

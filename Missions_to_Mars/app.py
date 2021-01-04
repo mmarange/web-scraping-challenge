@@ -43,5 +43,4 @@ if __name__ == "__main__":
     app.run(debug=True)
 
 
-#%%
-mongo.Mars.collection.update({}, mars_data, upsert=True)
+
